@@ -1,0 +1,33 @@
+{
+  "name": "lightspeed-test",
+  "version": "1.0.0",
+  "description": "Todo List with mySQL db",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --verbose test/*",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krenaldi/lightspeed-test.git"
+  },
+  "keywords": [
+    "mySQL",
+    "JavaScript",
+    "Node",
+    "Express",
+    "Handlebars"
+  ],
+  "author": "Kris Renaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krenaldi/lightspeed-test/issues"
+  },
+  "homepage": "https://github.com/krenaldi/lightspeed-test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}
