@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS lightspeed_db;
 USE lightspeed_db;
 
 -- Create the table for Employees assigned to Projects
-CREATE TABLE member
+CREATE TABLE employee
 (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, -- primary key column
     first_name VARCHAR(50) NOT NULL
@@ -25,7 +25,7 @@ CREATE TABLE tasks
     project_id INT UNSIGNED NOT NULL,
     INDEX proj_idx (project_id),
     CONSTRAINT fk_project FOREIGN KEY (project_id) REFERENCES project(id),
-    member_id INT UNSIGNED NOT NULL,
-    INDEX member_idx (member_id),
-    CONSTRAINT fk_member FOREIGN KEY (member_id) REFERENCES member(id)
+    employee_id INT UNSIGNED NOT NULL,
+    INDEX employee_idx (employee_id),
+    CONSTRAINT fk_employee FOREIGN KEY (employee_id) REFERENCES employee(id)
 );

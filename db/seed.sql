@@ -18,7 +18,7 @@ VALUES ('E-Commerce Website'),
 
 -- Insert rows into table 'Tasks'
 INSERT INTO tasks
-(task_name, duration, project_id, member_id)
+(task_name, duration, project_id, employee_id)
 VALUES
 ('Product Pages', 5, 1, 3),
 ( 'Shopping Cart', 10, 1, 2),
