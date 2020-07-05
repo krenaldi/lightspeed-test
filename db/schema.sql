@@ -24,8 +24,8 @@ CREATE TABLE tasks
     duration INT NOT NULL,
     project_id INT UNSIGNED NOT NULL,
     INDEX proj_idx (project_id),
-    CONSTRAINT fk_project FOREIGN KEY (project_id) REFERENCES project(id) ON DELETE CASCADE,
+    CONSTRAINT fk_project FOREIGN KEY (project_id) REFERENCES project(id),
     member_id INT UNSIGNED NOT NULL,
     INDEX member_idx (member_id),
-    CONSTRAINT fk_member FOREIGN KEY (member_id) REFERENCES member(id) ON DELETE CASCADE
+    CONSTRAINT fk_member FOREIGN KEY (member_id) REFERENCES member(id)
 );
