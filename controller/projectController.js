@@ -23,7 +23,7 @@ router.get("/projects/:id", function (req, res) {
 router.get("/tasks/:id", function (req, res) {
     let condition = req.params.id;
     project.getTasks(condition, function (result) {
-        res.render("tasks", { project_data: result });
+        res.render("tasks", { task_data: result });
     });
 });
 
