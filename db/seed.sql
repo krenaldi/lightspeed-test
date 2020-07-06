@@ -1,13 +1,13 @@
 USE lightspeed_db;
 
-INSERT INTO member (first_name)
+INSERT INTO employees (first_name)
 VALUES ('Stuart'),
 ('Tyler'),
 ('Adam'),
 ('Lan');
 
 -- Insert rows into table 'Project'
-INSERT INTO project
+INSERT INTO projects
 ( -- columns to insert data into
  title
 )
