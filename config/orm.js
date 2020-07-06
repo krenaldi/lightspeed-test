@@ -13,7 +13,7 @@ const orm = {
         });
     },
     getProjects: function (tableOne, tableTwo, tableThree, tableOneCol, tableTwoCol, tableThreeCol, tableOneFkOne, tableOneFkTwo, condition, cb) {
-        const queryString = "SELECT ??.??, ??.?? AS title, SUM(??.??) AS hours FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ? GROUP BY ??.??";
+        const queryString = "SELECT ??.?? AS name, ??.?? AS title, SUM(??.??) AS hours FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ? GROUP BY ??.??";
         console.log(queryString);
 
         connection.query(queryString, [tableTwo, tableTwoCol, tableThree, tableThreeCol, tableOne, tableOneCol, tableOne, tableTwo, tableThree, tableOne, tableOneFkOne, tableTwo, tableOne, tableOneFkTwo, tableThree, tableTwo, condition, tableThree, tableThreeCol], function (err, result) {

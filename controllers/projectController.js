@@ -7,7 +7,7 @@ const project = require("../models/project.js");
 // GET route for ALL Employees on index.hbs
 router.get("/", function (req, res) {
     project.getEmployees(function (result) {
-        res.render("employees", { member_data: result });
+        res.render("index", { member_data: result });
     });
 });
 

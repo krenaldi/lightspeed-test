@@ -9,8 +9,9 @@ $(document).ready(function () {
             method: "GET",
             url: "/projects/" + member_id
         }).then(function (data) {
-            // reload page to display devoured burger in proper column
-            location.reload();
+            // redirect to projects table
+            console.log(data);
+            
         });
     });
 });
