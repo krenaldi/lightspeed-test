@@ -15,6 +15,11 @@ $(document).ready(function () {
         });
     });
 
+    // Generate name of employees on projects table
+    let employee_name = $(".employee_name").val();
+    // console.log(employee_name);
+    $("#employee_name").html(employee_name);
+
     $(".project-tasks").on("submit", function (event) {
         event.preventDefault();
 
