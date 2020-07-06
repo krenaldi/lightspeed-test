@@ -1,4 +1,4 @@
-<h2>{{this.title}}</h2>
+<h3 id="project_title"></h3>
 <table class="table" id="projects">
     <thead class="thead-light">
         <tr>
@@ -15,9 +15,14 @@
     </thead>
     {{#each task_data}}
     <tr>
-        <td>{{this.task}}</td>
+        <td>{{this.task}} 
+            <input type="hidden" class="project_title" type="text" value="{{this.title}}"></td>
         <td>{{this.employee}}</td>
         <td>{{this.hours}}</td>
     </tr>
     {{/each}}
+    <tr>
+        <td colspan="2"></td>
+        <td class="hours">Total Hours: <span id="total_hours"></span></td>
+    </tr>
 </table>

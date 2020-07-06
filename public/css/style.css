@@ -1,3 +1,7 @@
 header {
    padding: 1rem;
 }
+
+.hours {
+   font-weight: bolder;
+}
