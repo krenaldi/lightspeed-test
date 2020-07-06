@@ -8,12 +8,12 @@ const project = {
         });
     },
     getProjects: function (condition, cb) {
-        orm.getProjects("tasks", "employees", "projects", "duration", "first_name", "title", "employee_id", "project_id", condition, function (res) {
+        orm.getProjects("tasks", "employees", "projects", "duration", "first_name", "id", "title", "employee_id", "project_id", condition, function (res) {
             cb(res);
         });
     },
     getTasks: function (condition, cb) {
-        orm.getTasks("tasks", "employees", "projects", "duration", "first_name", "title", "employee_id", "project_id", condition, function (res) {
+        orm.getTasks("tasks", "employees", "projects", "task_name", "duration", "first_name", "title", "employee_id", "project_id", condition, function (res) {
             cb(res);
         });
     }
