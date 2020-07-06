@@ -1,29 +1,23 @@
-<div class="col-md-12" id="tasks">
-    <div class="row">
-        <h2>{{this.title}}</h2>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h3>Task</h3>
-        </div>
-        <div class="col-md-4">
-            <h3>Assigned To</h3>
-        </div>
-        <div class="col-md-4">
-            <h3>Estimated Hours</h3>
-        </div>
-    </div>
+<h2>{{this.title}}</h2>
+<table class="table" id="projects">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">
+                Tasks
+            </th>
+            <th scope="col">
+                Assigned To
+            </th>
+            <th scope="col">
+                Estimated Hours
+            </th>
+        </tr>
+    </thead>
     {{#each task_data}}
-    <div class="row">
-        <div class="col-md-4 ">
-            <h3>{{this.task}}</h3>
-        </div>
-        <div class="col-md-4 ">
-            <h3>{{this.employee}}</h3>
-        </div>
-        <div class="col-md-4 ">
-            <h3>{{this.hours}}</h3>
-        </div>
-    </div>
+    <tr>
+        <td>{{this.task}}</td>
+        <td>{{this.employee}}</td>
+        <td>{{this.hours}}</td>
+    </tr>
     {{/each}}
-</div>
+</table>
