@@ -18,7 +18,9 @@ app.engine(".hbs", exphbs({ extname: ".hbs", defaultLayout: "main" }));
 app.set("view engine", ".hbs");
 
 // SETUP ROUTES
+const routes = require("./controllers/burgersController.js");
 
+app.use(routes);
 
 // Start server
 app.listen(PORT, function () {
