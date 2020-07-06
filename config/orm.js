@@ -13,7 +13,7 @@ const orm = {
         });
     },
     getProjects: function (tableOne, tableTwo, tableThree, tableOneCol, tableTwoCol, tableThreeCol, tableOneFkOne, tableOneFkTwo, condition, cb) {
-        const queryString = "SELECT ??.??, ??.?? AS 'Project Title', SUM(??.??) AS 'Estimated Hours' FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ? GROUP BY ??.??";
+        const queryString = "SELECT ??.??, ??.?? AS title, SUM(??.??) AS hours FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ? GROUP BY ??.??";
         console.log(queryString);
 
         connection.query(queryString, [tableTwo, tableTwoCol, tableThree, tableThreeCol, tableOne, tableOneCol, tableOne, tableTwo, tableThree, tableOne, tableOneFkOne, tableTwo, tableOne, tableOneFkTwo, tableThree, tableTwo, condition, tableThree, tableThreeCol], function (err, result) {
@@ -24,7 +24,7 @@ const orm = {
         });
     },
     getTasks: function (tableOne, tableTwo, tableThree, tableOneCol, tableTwoCol, tableThreeCol, tableOneFkOne, tableOneFkTwo, condition, cb) {
-        const queryString = "SELECT ??.?? AS 'Project Title', ??.?? AS 'Tasks', ??.?? AS 'Assigned To', ??.?? AS 'Estimated Hours' FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ?";
+        const queryString = "SELECT ??.?? AS title, ??.?? AS task, ??.?? AS member, ??.?? AS hours FROM ?? LEFT JOIN (??, ??) ON (??.??=??.id AND ??.??=??.id) WHERE ??.id = ?";
         console.log(queryString);
 
         connection.query(queryString, [tableThree, tableThreeCol, tableOne, tableOneCol, tableTwo, tableTwoCol, tableThree, tableThreeCol, tableOne, tableOneCol, tableOne, tableTwo, tableThree, tableOne, tableOneFkOne, tableTwo, tableOne, tableOneFkTwo, tableThree, tableTwo, condition], function (err, result) {
